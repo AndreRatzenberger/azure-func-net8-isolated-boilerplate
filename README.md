@@ -21,9 +21,7 @@ So save your sanity, grab this repo, and let's get down to business.
 
 If you want suprises tho, you can also brew those if you want. But you will curse the day you did that because of environment paths variable shenanigans.
 
-## Azure Functions Core Tools Setup
-
-Just when you thought you were done downloading stuff:
+- **Azure Functions Core Tools Setup**: Just when you thought you were done downloading stuff:
 
 ```bash
 brew tap azure/functions
