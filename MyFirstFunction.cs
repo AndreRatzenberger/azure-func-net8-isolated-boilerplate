@@ -9,8 +9,11 @@ using System.Threading.Tasks;
 static class MyFirstFunction
 {
     [Function(nameof(RaceOrchestrator))]
-    public static async Task<string> RaceOrchestrator([OrchestrationTrigger] TaskOrchestrationContext context)
+    public static async Task<string> RaceOrchestrator([OrchestrationTrigger] TaskOrchestrationContext context, ILogger log)
     {
+        //How to log in an Orchestrator - avoid it if necessary though
+        log = context.CreateReplaySafeLogger(nameof(RaceOrchestrator));
+
         // Fan-out/fan-in pattern
         var tasks = new[]
         {
@@ -25,8 +28,11 @@ static class MyFirstFunction
         var winner = await Task.WhenAny(tasks);
         var allFinished = await Task.WhenAll(tasks);
 
-        return $"All participants finished! The winner is {await winner}!";
+        var result = $"All participants finished! The winner is {await winner}!";
+        log.LogInformation(result);
+        return result;
     }
+        
 
     [Function(nameof(StartRunning))]
     public static async Task<string> StartRunning([ActivityTrigger] string participant, FunctionContext executionContext)
@@ -39,7 +45,7 @@ static class MyFirstFunction
         await Task.Delay(runningTime);
 
         logger.LogInformation($"Participant {participant} finished in {runningTime/1000.0} ms.");
-        return $"{participant} won the race! yay!";
+        return $"{participant}";
     }
 
     [Function(nameof(StartRaceContest))]

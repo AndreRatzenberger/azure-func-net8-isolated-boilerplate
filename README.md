@@ -7,7 +7,8 @@ The journey through the isolated setup can feel akin to navigating a labyrinth d
 
 Suppose you miraculously navigate your project past the nonexistent NuGet packages and/or version mismatches to a compilable state. In that case, don't be surprised if a runtime bug promptly greets you, turning your triumph into turmoil. To add insult to injury, the conventional boilerplate code hardly scratches the surface of what durable functions can truly offer.
 
-Why settle for boring boilerplate use cases? This project features an exhilarating race between various animals, a spectacle designed to showcase the fan-out/fan-in pattern in all its glory. This is not just code; it's a statement against the mundane, promising a sprinkle of excitement in the world of Hello Worlds!.
+Why settle for boring boilerplate use cases? This project features an exhilarating race between various animals, a spectacle designed to showcase the fan-out/fan-in pattern in all its glory. This is not just code; it's a statement against the mundane, promising a sprinkle of excitement in the world of Hello Worlds!
+
 
 So save your sanity, grab this repo, and let's get down to business.
 
@@ -16,8 +17,13 @@ So save your sanity, grab this repo, and let's get down to business.
 - **VS Code**: Because why torture yourself with anything less? Grab it [here](https://code.visualstudio.com/download).
 - **Azure Functions Extension for VS Code**: Slap this onto VS Code from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions).
 - [**Azurite**](https://github.com/Azure/Azurite?tab=readme-ov-file#getting-started): There you can store your pain. Also Durable Functions need a storage.
-- **.NET 8**: Fetch it from the [official site](https://dotnet.microsoft.com/en-us/download#macos). No surprises there.
+  
+Run it with
+````
+azurite --silent --location .azurite --debug .azurite/debug.log
+````
 
+- **.NET 8**: Fetch it from the [official site](https://dotnet.microsoft.com/en-us/download#macos). No surprises there.
 
 If you want suprises tho, you can also brew those if you want. But you will curse the day you did that because of environment paths variable shenanigans.
 
