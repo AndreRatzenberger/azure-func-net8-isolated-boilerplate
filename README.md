@@ -1,5 +1,5 @@
 
-# Boilerplate Code for Isolated Azure Functions on .NET 8 and Apple Silicon
+# Boilerplate Code for Durable Functions on .NET 8 Isolated and Apple Silicon
 
 This repository emerges as a lighthouse amidst the fog of Azure's official documentation and tooling mishaps. If you've ever found yourself in the treacherous waters of setting up Azure Functions from the ground up, especially the new "That's how it should be done" way all about isolated processes, where official examples lead to dead ends and commands vanish like mirages, consider this your haven.
 
@@ -15,7 +15,7 @@ So save your sanity, grab this repo, and let's get down to business.
 
 - **VS Code**: Because why torture yourself with anything less? Grab it [here](https://code.visualstudio.com/download).
 - **Azure Functions Extension for VS Code**: Slap this onto VS Code from the [Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions).
-- **Azurite**: There you can store your pain. Also Durable Functions need a storage.
+- [**Azurite**](https://github.com/Azure/Azurite?tab=readme-ov-file#getting-started): There you can store your pain. Also Durable Functions need a storage.
 - **.NET 8**: Fetch it from the [official site](https://dotnet.microsoft.com/en-us/download#macos). No surprises there.
 
 
