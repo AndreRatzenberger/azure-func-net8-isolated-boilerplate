@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 static class MyFirstFunction
 {
     [Function(nameof(RaceOrchestrator))]
-    public static async Task<string> RaceOrchestrator([OrchestrationTrigger] TaskOrchestrationContext context, ILogger log)
+    public static async Task<string> RaceOrchestrator([OrchestrationTrigger] TaskOrchestrationContext context)
     {
         //How to log in an Orchestrator - avoid it if necessary though
-        log = context.CreateReplaySafeLogger(nameof(RaceOrchestrator));
+        var log = context.CreateReplaySafeLogger(nameof(RaceOrchestrator));
 
         // Fan-out/fan-in pattern
         var tasks = new[]
