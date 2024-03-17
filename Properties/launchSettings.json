@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DurableFunctions.Net8Isolated": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7049",
+      "launchBrowser": false
+    }
+  }
+}
